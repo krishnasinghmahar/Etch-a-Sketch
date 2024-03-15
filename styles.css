@@ -1,43 +1,134 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
 
-body{
+body {
     background-color: aquamarine;
+    box-sizing: border-box;
+    height: 100vh;
+    display: flex;
+
 }
 
-#sketch-area{
+h1{
+    font-size: 80px;
+    color:salmon;
+    text-shadow: 5px 5px 5px grey;
+}
+
+#flex-button {
+    flex: 1;
+}
+
+#flex-sketch {
+    flex: 2;
+}
+
+#sketch-area {
     display: flex;
     flex-wrap: wrap;
     background-color: white;
-    margin: 100px auto 10px auto;
-    box-shadow: 10px 10px gray;
+    margin: 20px auto 10px 50px;
+    box-shadow: 7px 7px 7px 7px gray;
+    border: 40px solid salmon;
+    border-radius: 40px;
 }
 
-.cell{
-    border: 1px solid antiquewhite;
+.cell {
+    user-select: none;
+    box-sizing: border-box;
+    border: none;
+    cursor:crosshair;
 }
 
-#slider-container{
+#slider-container {
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content:center;
     align-items: center;
 }
 
-.slider{
+.slider {
     height: 25px;
-    width: 20%;
- 
+    width: 130%;
 }
 
-#slider-value{
+#slider-value {
     margin: 0 auto;
     text-align: center;
+    color: blue;
+    font-size: 18px;
+    outline: blue;
 }
 
-.slider:hover{
+.slider:hover {
+    cursor: pointer;
+}
+
+#button-container {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    width: 35%;
+    justify-content: center;
+    background-color: salmon;
+    margin: 100px 50px 10px auto;
+    padding: 40px;
+    border-radius: 40px;
+    box-shadow: 6px 6px 6px 6px gray;
+}
+
+button {
+    padding: 10px;
+    border-radius: 10px;
+    font-weight: 600;
+    color: blue;
+    background-color: azure;
+    box-shadow: 3px 3px 3px 3px gray;
+    border: blue solid 2px;
+    cursor: pointer;
+}
+
+button:hover {
+    transform: scale(1.05);
+    background-color: aqua;
+}
+
+input[type='color'] {
+    width: 50px;
+    height: 50px;
+    border: none;
+    background-color: salmon;
+}
+
+input[type='color']::-webkit-color-swatch-wrapper {
+    padding: 0;
+}
+
+input[type='color']::-webkit-color-swatch {
+    border: none;
+    border-radius: 50%;
+    box-shadow: 1px 1px 1px 1px grey;
+    border: blue 2px solid;
+}
+
+span {
+    color: blue;
+
+}
+
+#bg-color-box {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    font-weight: bold;
+}
+
+
+
+input[type='color']:hover {
+    transform: scale(1.2);
     cursor: pointer;
 }
